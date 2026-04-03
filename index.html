@@ -39,6 +39,8 @@
     html, body {
       height: 100vh;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
       background: var(--bg-right);
       color: var(--text);
       font-family: var(--font-body);
@@ -59,11 +61,8 @@
 
     /* ── TOP BAR ─────────────────────────────────────── */
     #topbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      position: relative;
+      flex-shrink: 0;
       height: 56px;
       display: flex;
       align-items: center;
@@ -146,8 +145,8 @@
     /* ── MAIN LAYOUT ─────────────────────────────────── */
     #main {
       display: flex;
-      height: calc(100vh - 56px);
-      margin-top: 56px;
+      flex: 1;
+      min-height: 0;
       overflow: hidden;
     }
 
@@ -157,6 +156,7 @@
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
+      min-height: 0;
       overflow: hidden;
       background: var(--bg-left);
       border-right: 1px solid var(--gold-line);
@@ -328,6 +328,7 @@
     #right {
       flex: 1;
       min-width: 0;
+      min-height: 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
