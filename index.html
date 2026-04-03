@@ -157,7 +157,6 @@
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
-      height: 100%;
       overflow: hidden;
       background: var(--bg-left);
       border-right: 1px solid var(--gold-line);
@@ -166,10 +165,11 @@
     .left-inner {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      flex: 1;
+      min-height: 0;
       padding: 22px 20px;
       gap: 18px;
-      overflow: hidden;
+      overflow-y: auto;
     }
 
     /* ── SECTION LABEL ───────────────────────────────── */
@@ -287,7 +287,6 @@
       width: 100%;
       font-weight: 500;
       flex-shrink: 0;
-      margin-top: auto;
     }
 
     .btn-gold:hover { background: #d9bc6a; }
@@ -328,12 +327,11 @@
     /* ── RIGHT PANEL ─────────────────────────────────── */
     #right {
       flex: 1;
+      min-width: 0;
       display: flex;
       flex-direction: column;
-      height: 100%;
       overflow: hidden;
       background: var(--bg-right);
-      min-width: 0;
     }
 
     /* ── CHAT HEADER ─────────────────────────────────── */
